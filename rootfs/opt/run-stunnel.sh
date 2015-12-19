@@ -7,7 +7,7 @@ usage() {
 
 alpine-stunnel is a light utility container for creating secure tunnels. It builds on stunnel; learn more about stunnel on its home page: https://www.stunnel.org/index.html.
 
-Usage: docker run [DOCKER_OPTIONS] alpine-stunnel -t <tls-dir> -c <connect-port> [-d]
+Usage: docker run [DOCKER_OPTIONS] flitbit/alpine-stunnel -t <tls-dir> -c <connect-port> [-d]
 
 DOCKER_OPTIONS are documented at https://docs.docker.com/engine/reference/commandline/run/
 
@@ -43,12 +43,12 @@ EXAMPLES:
   1. Assume a legacy HTTP server on 10.0.0.10, place a secure tunnel in front
      of the insecure server, effectively establishing SSL/TLS:
 
-  > docker run -d -p 443:4442 --volume /my/local/file-system/keys:/pki/keys alpine-stunnel -c 10.0.0.10:80 -t /pki/keys -d
+  > docker run -d -p 443:4442 --volume /my/local/file-system/keys:/pki/keys flitbit/alpine-stunnel -c 10.0.0.10:80 -t /pki/keys -d
 
   2. Imagine providing access to a secure HTTPS server to a community of users
      without requiring SSL/TLS:
 
-  > docker run -d -p 8000:4442 --volume /my/local/file-system/keys:/pki/keys alpine-stunnel -c 10.0.0.10:443 -t /pki/keys
+  > docker run -d -p 8000:4442 --volume /my/local/file-system/keys:/pki/keys flitbit/alpine-stunnel -c 10.0.0.10:443 -t /pki/keys
 
 EOT
 }
