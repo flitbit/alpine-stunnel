@@ -81,6 +81,7 @@ CLIENT=${CLIENT:-yes}
 
 mkdir -p /etc/stunnel.d
 
+# Generate a simple stunnel configuration.
 cat << EOF > /etc/stunnel.d/stunnel.conf
 cert = ${TLS_PATH}/cert.pem
 key = ${TLS_PATH}/key.pem
