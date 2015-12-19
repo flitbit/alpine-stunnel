@@ -8,7 +8,7 @@ alpine-stunnel is a light utility container for creating secure tunnels. It buil
 
 ### Options
 
-`docker run` [are documented on docker's website](https://docs.docker.com/engine/reference/commandline/run/)
+`docker run` options [are documented on docker's website](https://docs.docker.com/engine/reference/commandline/run/)
 
 `flitbit/alpine-stunnel` options:
 
